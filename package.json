@@ -8,6 +8,8 @@
   "devDependencies": {
     "stylus": "^0.47.1",
     "gulp": "^3.8.6",
-    "gulp-stylus": "^1.0.5"
+    "gulp-stylus": "^1.0.5",
+    "grunt": "^0.4.5",
+    "kouto-swiss": "^0.8.6"
   }
 }
