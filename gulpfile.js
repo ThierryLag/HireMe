@@ -1,6 +1,6 @@
 var gulp = require( 'gulp' );
-var stylus = require('gulp-stylus');
-var koutoSwiss = require( "kouto-swiss" );
+var stylus = require( 'gulp-stylus' );
+var koutoSwiss = require( 'kouto-swiss' );
 
 // ----------------------------------------------------------------------------
 gulp.task( 'stylus', function() {
@@ -13,9 +13,16 @@ gulp.task( 'stylus', function() {
 });
 
 // ----------------------------------------------------------------------------
-gulp.task( 'watch' , function() {
-    gulp.watch( './src/css/*.styl', ['stylus'] );
+gulp.task( 'html', function() {
+    return gulp.src( './src/*.html')
+        .pipe(gulp.dest('./bin/'));
 });
 
 // ----------------------------------------------------------------------------
-gulp.task( 'default', ['stylus'] );
+gulp.task( 'watch' , function() {
+    gulp.watch( './src/css/*.styl', ['stylus'] );
+    gulp.watch( './src/*.html', ['html'] );
+});
+
+// ----------------------------------------------------------------------------
+gulp.task( 'default', ['stylus', 'html'] );
