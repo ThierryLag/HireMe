@@ -10,6 +10,7 @@
     "gulp": "^3.8.6",
     "gulp-stylus": "^1.0.5",
     "grunt": "^0.4.5",
-    "kouto-swiss": "^0.8.6"
+    "kouto-swiss": "^0.8.6",
+    "gulp-minify-css": "^0.3.6"
   }
 }

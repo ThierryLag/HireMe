@@ -1,5 +1,6 @@
 var gulp = require( 'gulp' );
 var stylus = require( 'gulp-stylus' );
+var minifyCSS = require( 'gulp-minify-css' );
 var koutoSwiss = require( 'kouto-swiss' );
 
 // ----------------------------------------------------------------------------
@@ -9,6 +10,7 @@ gulp.task( 'stylus', function() {
             errors: true, 
             use:koutoSwiss()
         }))
+        .pipe( minifyCSS() )
         .pipe( gulp.dest( './bin/css' ) );
 });
 
