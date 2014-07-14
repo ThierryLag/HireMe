@@ -5,13 +5,13 @@ var koutoSwiss = require( 'kouto-swiss' );
 
 // ----------------------------------------------------------------------------
 gulp.task( 'stylus', function() {
-    return gulp.src( './src/css/*.styl' )
+    return gulp.src( './src/styles/*.styl' )
         .pipe( stylus({
             errors: true, 
             use:koutoSwiss()
         }))
         .pipe( minifyCSS() )
-        .pipe( gulp.dest( './bin/css' ) );
+        .pipe( gulp.dest( './bin/styles' ) );
 });
 
 // ----------------------------------------------------------------------------
@@ -22,7 +22,7 @@ gulp.task( 'html', function() {
 
 // ----------------------------------------------------------------------------
 gulp.task( 'watch' , function() {
-    gulp.watch( './src/css/*.styl', ['stylus'] );
+    gulp.watch( './src/styles/*.styl', ['stylus'] );
     gulp.watch( './src/*.html', ['html'] );
 });
 
