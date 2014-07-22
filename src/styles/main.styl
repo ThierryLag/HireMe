@@ -7,33 +7,29 @@
 meyer-reset()
 
 // FONTS
-font-face( "Webhostinghub Glyphs", "./fonts/webhostinghub-glyphs", normal, normal, true )
-Glyphs = "Webhostinghub Glyphs"
+//font-face( "Webhostinghub Glyphs", "./fonts/webhostinghub-glyphs", normal, normal, true )
+//Glyphs = "Webhostinghub Glyphs"
 
 // GLOBALS
 *
-	font-smooth always
-	-webkit-font-smoothing antialiased
+    font-smooth always
+    -webkit-font-smoothing antialiased
     outline 0
     box-sizing border-box
     -webkit-tap-highlight-color rgba( black, 0 )
     user-select none
     -webkit-text-size-adjust 100%
 
-
 html
-	width 100%
-	height 100%
-	
-body
-    font: 12px Helvetica, Arial, sans-serif
-    line-height: 1.2rem
+    width 100%
+    height 100%
 
 // CONTENT
 #content
-	postion relative
-	width 100%
-	height 100%
+    postion relative
+    z-index 10000
+    width 100%
+    height 100%
 
     header
         margin-bottom 1rem
@@ -44,6 +40,8 @@ body
             font-size 1.2rem
         figure
             width 100%
+            postion absolute
+            z-index 10
 
     article
         section
@@ -55,9 +53,5 @@ body
 
         #welcome
             :before
-                content: "T"
-
-
-
-
+                content "L"
 
