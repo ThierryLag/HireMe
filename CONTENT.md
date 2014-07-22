@@ -11,17 +11,17 @@ Photo + Thierry Lagasse, Liège
 
 Bonjour,
 
-J'ai 35ans, je suis dévelopeur freelance et près à vous aider !
+J'ai 35ans, je suis développeur freelance et prêt à vous aider !
 
 ---
 
-Si j'ai codé mes premier programmes dès la fin du XXème siècle (1997), par ma formation d'analyste programmeur
-je me suis spécialsé dans les applications WEB et métiers depuis plus de 10ans (2003).
+Si j'ai codé mes premiers programmes dès la fin du XXème siècle (1997), par ma formation d'analyste programmeur
+je me suis spécialisé dans les applications WEB et métiers depuis plus de 10ans (2003).
 
 Mobile et n'ayant pas peur de la route, j'ai d'abord travaillé au Luxembourg pendant plusieurs années 
 comme développeur Web et project manager. 
 
-Depuis quelques années, je suis revenu en Belgique comme freelance ou je mes mes talents d'analyste au service de mes clients.
+Depuis quelques années, je suis revenu en Belgique comme freelance ou je mets mes talents d'analyste au service de mes clients.
 
 --- 
 
