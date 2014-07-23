@@ -1,4 +1,5 @@
 var gulp = require( 'gulp' );
+var gutil = require( 'gulp-util' );
 var stylus = require( 'gulp-stylus' );
 var jade = require('gulp-jade');
 var minifyCSS = require( 'gulp-minify-css' );
@@ -11,8 +12,9 @@ gulp.task( 'stylus', function() {
             errors: true, 
             compress: true,
             use: [ koutoSwiss() ]
-        }))
-        .pipe( minifyCSS() )
+        }) )
+        .on( 'error', gutil.log )
+        //.pipe( minifyCSS() )
         .pipe( gulp.dest( 'bin/styles' ) );
 });
 
