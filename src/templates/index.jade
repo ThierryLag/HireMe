@@ -13,7 +13,8 @@ html( lang="fr" )
         #content
             header
                 h1 Thierry Lagasse
-                figure: img(src="styles/images/background.jpg")
+                blockquote 
+                //figure: img(src="styles/images/background.jpg")
             
             article
                 section#welcome
@@ -36,21 +37,19 @@ html( lang="fr" )
                         |, par téléphone, 
                         a( href="tel:0497723202" ) +32 (0)497 72 32 02 
                         | ou par télépathie (mais ce dernier medium interfère avec mon Wifi)...
-                    p Je fréquente également l'espace de coworking, "La Forge", au centre de Liège.
+                    p Je fréquente également l'espace de coworking, "La Forge", au centre de Liège, nous pourrions aussi nous y croisez à l'occasion.
 
-                    p.hireme Envie de bosser ensemble ?
-                    a( href="mailto:thierry@passtech.be", class="hireme", rel="external", title="Engagez-moi !"): span Engagez-moi !
+                    p.hireme 
+                        | Envie de bosser ensemble ?
+                        a( href="mailto:thierry@passtech.be", rel="external", title="Engagez-moi !"): span Engagez-moi !
 
                 nav#socials
                     a( href="https://twitter.com/akarun", class="twitter", rel="external"): span Twitter
                     a( href="http://www.linkedin.com/in/thierrylagasse", class="linkedin", rel="external"): span LinkedIn
                     a( href="http://github.com/thierrylag", class="github", rel="external"): span Github
                     a( href="http://passtech.be/cv", class="cv", rel="external"): span CV
-                    // a( href="mailto:thierry@passtech.be", class="email", rel="external"): span Email
 
             footer
-                p.left 
+                p.left
                     | &copy; 2014 - hire.passtech.be
-                p
-                    a( href="http://passtech.be", title="Visiter mon mini-site") Passtech.be
                     
