@@ -9,6 +9,7 @@ meyer-reset()
 // FONTS
 font-face( "monosocial", "./fonts/MonoSocialIconsFont-1.10", normal, normal )
 font-face( "robotolight", "./fonts/Roboto-Light-webfont", normal, normal )
+font-face( "robotolight", "./fonts/Roboto-Regular-webfont", bold, normal )
 robotolight = "robotolight", font-stack( "Helvetica" )
 
 // VARS
@@ -16,6 +17,7 @@ greydark = #333
 greyregular = #666
 greylight = #FFF
 
+elementspace = 5rem
 
 // GLOBALS
 *
@@ -35,27 +37,43 @@ html
     background url('./images/background.jpg') center center fixed
     background-size cover
 
+    strong 
+        font-weight bold
+
 // CONTENT
+#behind
+    display block
+    position absolute
+    top -6rem
+    right -2rem
+    size 180px 160px
+    background url( "images/code.png" ) top left no-repeat
+    
+    span
+        display none
+
 #content
     width 50%
     padding 5rem
     font-size 1.6rem
     line-height 2.2rem
     margin-bottom 1rem
+    position relative
+    text-align justify
 
     header
         margin-top 20%
-        margin-bottom 1rem
+        margin-bottom elementspace
 
         h1
             font-size 3.2rem
 
     article
         p
-            margin-bottom 2rem
+            margin-bottom 1rem
 
         section
-            margin-bottom 1rem
+            margin-bottom elementspace
         
         #invite
             .hireme
@@ -102,10 +120,3 @@ html
 
     footer
         margin-top 20%
-
-        .left
-            float left
-        .right
-            text-align right
-                
-
