@@ -52,9 +52,9 @@ html
 // CONTENT
 #behind
     display block
-    position absolute
+    position fixed
     top -11rem
-    right 0
+    right -8rem
     size 180px 160px
     background url( "images/code.png" ) top left no-repeat
     
@@ -62,10 +62,11 @@ html
 
     &:hover
         top 0
+        right 0
 
         span
-            position absolute
             display block
+            position absolute
             top 16rem
             right 1rem
             font-size 1.6rem
@@ -97,23 +98,25 @@ html
         section
             margin-bottom elementspace
         
-        #invite
-            .hireme
-                margin-top 2rem
-                text-align center
+        #hireme
+            margin-top 2rem
+            text-align center
 
-                a
-                    font-size 2.1rem
-                    display block
+            a
+                font-size 2.1rem
+                display block
+                color greylight
+                background-color greyregular
+                text-decoration none
+                
+                size 40rem 5.4rem
+                line-height 5.4rem 
+                border-radius 2.7rem
+                margin 1rem auto
+
+                &:hover
                     color greylight
-                    background-color greyregular
-                    text-decoration none
-                    padding 1rem 2rem
-                    margin 1rem auto
-
-                    &:hover
-                        color greylight
-                        background-color greydark
+                    background-color greydark
 
         #socials
             margin-top 4rem
@@ -122,11 +125,11 @@ html
             a
                 font normal 6rem/5rem "monosocial"
                 text-decoration none
-                display inline-block
-                margin 0 .5rem
+                display inline-block 
+                padding 1rem .5rem
 
                 span
-                    display none
+                    display none    
 
                 &.twitter
                     &:before
