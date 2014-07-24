@@ -53,11 +53,24 @@ html
 #behind
     display block
     position absolute
-    top -6rem
-    right -2rem
+    top -11rem
+    right 0
     size 180px 160px
     background url( "images/code.png" ) top left no-repeat
     
+    transition all .1s easing( "in-out-sine" )
+
+    &:hover
+        top 0
+
+        span
+            position absolute
+            display block
+            top 16rem
+            right 1rem
+            font-size 1.6rem
+            text-align right
+
     span
         display none
 
