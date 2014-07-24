@@ -5,6 +5,7 @@
 // RESET
 @import "kouto-swiss"
 meyer-reset()
+box-sizing-reset()
 
 // FONTS
 font-face( "monosocial", "./fonts/MonoSocialIconsFont-1.10", normal, normal )
@@ -14,8 +15,8 @@ robotolight = "robotolight", font-stack( "Helvetica" )
 
 // VARS
 greydark = #333
-greyregular = #666
-greylight = #FFF
+greyregular = #888
+greylight = #F0F0F0
 
 elementspace = 5rem
 
@@ -39,6 +40,14 @@ html
 
     strong 
         font-weight bold
+
+    a
+        color greyregular
+        font-weight bold
+        text-decoration none
+
+        &:hover
+            color greydark
 
 // CONTENT
 #behind
@@ -81,12 +90,17 @@ html
                 text-align center
 
                 a
+                    font-size 2.1rem
                     display block
-                    background-color greyregular
                     color greylight
+                    background-color greyregular
                     text-decoration none
                     padding 1rem 2rem
-                    margin 1rem auto 
+                    margin 1rem auto
+
+                    &:hover
+                        color greylight
+                        background-color greydark
 
         #socials
             margin-top 4rem
@@ -94,7 +108,6 @@ html
 
             a
                 font normal 6rem/5rem "monosocial"
-                color greyregular
                 text-decoration none
                 display inline-block
                 margin 0 .5rem
