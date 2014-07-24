@@ -1,0 +1,151 @@
+/**
+ *  Passtech.be - HireMe page - Main Stylus Document
+ */
+
+// RESET
+@import "kouto-swiss"
+meyer-reset()
+box-sizing-reset()
+
+// FONTS
+font-face( "monosocial", "./fonts/MonoSocialIconsFont-1.10", normal, normal )
+font-face( "robotolight", "./fonts/Roboto-Light-webfont", normal, normal )
+font-face( "robotolight", "./fonts/Roboto-Regular-webfont", bold, normal )
+robotolight = "robotolight", font-stack( "Helvetica" )
+
+// VARS
+greydark = #333
+greyregular = #888
+greylight = #F0F0F0
+
+elementspace = 5rem
+
+// GLOBALS
+*
+    font-smooth always
+    -webkit-font-smoothing antialiased
+    outline 0
+    box-sizing border-box
+    -webkit-tap-highlight-color rgba( black, 0 )
+    user-select none
+    -webkit-text-size-adjust 100%
+
+html
+    font normal 62.5%/2 robotolight
+    width 100%
+    height 100%
+    
+    background url('./images/background.jpg') center center fixed
+    background-size cover
+
+    strong 
+        font-weight bold
+
+    a
+        color greyregular
+        font-weight bold
+        text-decoration none
+
+        &:hover
+            color greydark
+
+// CONTENT
+#behind
+    display block
+    position fixed
+    top -11rem
+    right -8rem
+    size 180px 160px
+    background url( "images/code.png" ) top left no-repeat
+    
+    transition all .1s easing( "in-out-sine" )
+
+    &:hover
+        top 0
+        right 0
+
+        span
+            display block
+            position absolute
+            top 16rem
+            right 1rem
+            font-size 1.6rem
+            text-align right
+
+    span
+        display none
+
+#content
+    width 50%
+    padding 5rem
+    font-size 1.6rem
+    line-height 2.2rem
+    margin-bottom 1rem
+    position relative
+    text-align justify
+
+    header
+        margin-top 20%
+        margin-bottom elementspace
+
+        h1
+            font-size 3.2rem
+
+    article
+        p
+            margin-bottom 1rem
+
+        section
+            margin-bottom elementspace
+        
+        #hireme
+            margin-top 2rem
+            text-align center
+
+            a
+                font-size 2.1rem
+                display block
+                color greylight
+                background-color greyregular
+                text-decoration none
+                
+                size 40rem 5.4rem
+                line-height 5.4rem 
+                border-radius 2.7rem
+                margin 1rem auto
+
+                &:hover
+                    color greylight
+                    background-color greydark
+
+        #socials
+            margin-top 4rem
+            text-align center
+
+            a
+                font normal 6rem/5rem "monosocial"
+                text-decoration none
+                display inline-block 
+                padding 1rem .5rem
+
+                span
+                    display none    
+
+                &.twitter
+                    &:before
+                        content ""
+                &.linkedin
+                    &:before
+                        content ""
+                &.github
+                    &:before
+                        content ""
+                &.cv
+                    &:before
+                        content ""
+                &.passtech
+                    &:before
+                        content ""
+
+    footer
+        margin-top 20%

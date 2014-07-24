@@ -1,0 +1,19 @@
+{
+  "name": "HireMe",
+  "version": "0.0.1",
+  "description": "Simple 'Hire Me' page for Passtech.",
+  "main": "static/index.html",
+  "author": "Thierry 'Akarun' Lagasse",
+  "license": "LICENSE.md",
+  "devDependencies": {
+    "stylus": "^0.47.1",
+    "gulp": "^3.8.6",
+    "gulp-stylus": "^1.0.5",
+    "grunt": "^0.4.5",
+    "kouto-swiss": "^0.8.6",
+    "gulp-jade": "^0.6.1",
+    "jade": "^1.4.2",
+    "gulp-util": "^3.0.0",
+    "gulp-rimraf": "^0.1.0"
+  }
+}
