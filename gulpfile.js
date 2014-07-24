@@ -1,34 +1,40 @@
 var gulp = require( 'gulp' );
 var gutil = require( 'gulp-util' );
+var rimraf = require('gulp-rimraf');
 var stylus = require( 'gulp-stylus' );
 var jade = require('gulp-jade');
-var minifyCSS = require( 'gulp-minify-css' );
 var koutoSwiss = require( 'kouto-swiss' );
+
+// ----------------------------------------------------------------------------
+gulp.task( 'clean', function() {
+    var clearFiles = [
+        'public/*.html',
+        'public/assets/**/*.css',
+        'public/assets/**/*.js'
+    ]; 
+
+    return gulp.src( clearFiles, { read: false } )
+        .pipe( rimraf() )
+        .on( 'error', gutil.log );
+});
 
 // ----------------------------------------------------------------------------
 gulp.task( 'stylus', function() {
     return gulp.src( 'src/styles/*.styl' )
         .pipe( stylus({
-            errors: true, 
             compress: true,
             use: [ koutoSwiss() ]
         }) )
         .on( 'error', gutil.log )
-        //.pipe( minifyCSS() )
-        .pipe( gulp.dest( 'bin/styles' ) );
-});
-
-// ----------------------------------------------------------------------------
-gulp.task( 'html', function() {
-    return gulp.src( './src/*.html' )
-        .pipe( gulp.dest( './bin/' ) );
+        .pipe( gulp.dest( 'public/assets' ) );
 });
 
 // ----------------------------------------------------------------------------
 gulp.task( 'jade', function() {
-    return gulp.src( './src/templates/*.jade' )
+    return gulp.src( 'src/templates/*.jade' )
         .pipe( jade() )
-        .pipe( gulp.dest( './bin/' ) )
+        .on( 'error', gutil.log )
+        .pipe( gulp.dest( 'public/' ) )
 });
 
 // ----------------------------------------------------------------------------
@@ -38,4 +44,4 @@ gulp.task( 'watch' , function() {
 });
 
 // ----------------------------------------------------------------------------
-gulp.task( 'default', ['stylus', 'watch'] );
+gulp.task( 'default', ['clean', 'stylus', 'jade'] );
