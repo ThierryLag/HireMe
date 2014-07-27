@@ -1,6 +1,9 @@
 var gulp = require( 'gulp' );
 var gutil = require( 'gulp-util' );
 var rimraf = require('gulp-rimraf');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 var stylus = require( 'gulp-stylus' );
 var jade = require('gulp-jade');
 var koutoSwiss = require( 'kouto-swiss' );
@@ -30,6 +33,16 @@ gulp.task( 'stylus', function() {
 });
 
 // ----------------------------------------------------------------------------
+gulp.task( 'scripts', function() {
+    return gulp.src( 'src/scripts/*.js' )
+        .pipe( concat( 'app.js' ) )
+        .pipe( gulp.dest( 'public/assets' ))
+        .pipe( rename( 'app.min.js' ) )
+        .pipe( uglify() )
+        .pipe( gulp.dest( 'public/assets' ))
+});
+
+// ----------------------------------------------------------------------------
 gulp.task( 'jade', function() {
     return gulp.src( 'src/templates/*.jade' )
         .pipe( jade() )
@@ -40,8 +53,9 @@ gulp.task( 'jade', function() {
 // ----------------------------------------------------------------------------
 gulp.task( 'watch' , function() {
     gulp.watch( 'src/styles/*.styl', ['stylus']);
+    gulp.watch( 'src/scripts/*.js', ['scripts']);
     gulp.watch( 'src/templates/*.jade', ['jade']);
 });
 
 // ----------------------------------------------------------------------------
-gulp.task( 'default', ['clean', 'stylus', 'jade'] );
+gulp.task( 'default', ['clean', 'stylus', 'scripts', 'jade'] );
