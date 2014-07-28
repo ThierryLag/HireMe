@@ -16,8 +16,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
          $( 'a[rel="external"]' ).on 'click', (event) ->
             event.preventDefault()
             externalUrl = $( @ ).attr "href"
+            linkCategory = ( $( @ ).attr "class" )?.toLowerCase() ? "outbound"
 
-            ga 'send', 'event', 'outbound', 'click', externalUrl, 
+            ga 'send', 'event', linkCategory, 'click', externalUrl, 
                 'hitCallback': () ->
                     document.location = externalUrl;
 ) jQuery

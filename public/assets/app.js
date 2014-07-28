@@ -14,10 +14,11 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     ga('send', 'pageview');
     return $(function() {
       return $('a[rel="external"]').on('click', function(event) {
-        var externalUrl;
+        var externalUrl, linkCategory, _ref, _ref1;
         event.preventDefault();
         externalUrl = $(this).attr("href");
-        return ga('send', 'event', 'outbound', 'click', externalUrl, {
+        linkCategory = (_ref = (_ref1 = $(this).attr("class")) != null ? _ref1.toLowerCase() : void 0) != null ? _ref : "outbound";
+        return ga('send', 'event', linkCategory, 'click', externalUrl, {
           'hitCallback': function() {
             return document.location = externalUrl;
           }
